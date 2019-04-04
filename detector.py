@@ -79,5 +79,5 @@ def detect(image):
     results = model.detect([image])
     r = results[0]
     img_res = detector_vis.display_instances(image, r['rois'], r['masks'], r['class_ids'], class_names, r['scores'])
-    return img_res
+    return img_res, r
 
